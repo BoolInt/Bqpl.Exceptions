@@ -8,6 +8,9 @@ namespace Bqpl.Exceptions
     [Pure]
     public static ArgumentException CreateArgumentException(string argumentName, MessageText message)
     {
+      if (message == null)
+        throw new ArgumentNullException(nameof(message));
+
       return new ArgumentException(message.Text, argumentName);
     }
 
@@ -20,6 +23,9 @@ namespace Bqpl.Exceptions
     [Pure]
     public static ArgumentNullException CreateArgumentNullException(string argumentName, MessageText message)
     {
+      if (message == null)
+        throw new ArgumentNullException(nameof(message));
+
       return new ArgumentNullException(argumentName, message.Text);
     }
 

@@ -26,8 +26,7 @@ set version=
 if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
-mkdir Build
-call %nuget% pack "%project%\%project%.csproj" -symbols -o Build -p Configuration=%config% %version%
+call %nuget% pack -symbols -o Build -p Configuration=%config% %version%
 if not "%errorlevel%"=="0" goto failure
 
 :success
