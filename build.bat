@@ -7,11 +7,6 @@ if "%config%" == "" (
    set config=Release
 )
 
-set version=
-if not "%PackageVersion%" == "" (
-   set version=%PackageVersion%
-)
-
 REM Restore
 call dotnet restore
 if not "%errorlevel%"=="0" goto failure
@@ -21,8 +16,18 @@ REM Build
 if not "%errorlevel%"=="0" goto failure
 
 REM Package
-mkdir %cd%\Artifacts
-call dotnet pack %project% --configuration %config% %version% --output Artifacts
+REM Die Paket-Informationen werden aus der project.json gezogen. Diese ist aber nicht aktuell (Version)
+REM mkdir %cd%\Artifacts
+REM call dotnet pack %project% --configuration %config% --output Artifacts
+REM if not "%errorlevel%"=="0" goto failure
+
+REM Pack
+set version=
+if not "%PackageVersion%" == "" (
+   set version=-Version %PackageVersion%
+)
+mkdir Build
+call %nuget% pack "%project%\%project%.csproj" -symbols -o Build -p Configuration=%config% %version%
 if not "%errorlevel%"=="0" goto failure
 
 :success
