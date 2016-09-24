@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bqpl.Exceptions", "Bqpl.Exceptions\Bqpl.Exceptions.csproj", "{778DED95-E5AD-48EA-9A74-D0E0BC8A6AFB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{84100EF1-9A39-43F4-9FC8-2FE728ACD8EC}"
+	ProjectSection(SolutionItems) = preProject
+		build.bat = build.bat
+		pre-build.bat = pre-build.bat
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
