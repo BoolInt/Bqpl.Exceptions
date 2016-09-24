@@ -26,7 +26,7 @@ set version=
 if not "%PackageVersion%" == "" (
    set version=-Version %PackageVersion%
 )
-call %nuget% pack "%project%.nuspec -symbols -o Build -p Configuration=%config% %version%
+call %nuget% pack "%project%.nuspec" -symbols -o Build -p Configuration=%config% %version%
 if not "%errorlevel%"=="0" goto failure
 
 :success
