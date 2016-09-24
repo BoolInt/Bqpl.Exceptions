@@ -1,0 +1,11 @@
+﻿{
+  "frameworks": {
+    "net461": { }
+  },
+  "runtimes": {
+    "win": { }
+  },
+  "dependencies": {
+    "Microsoft.CSharp": "4.0.1"
+  }
+}
