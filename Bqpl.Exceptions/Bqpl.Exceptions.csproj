@@ -39,6 +39,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="project.json" />
+    <None Include="Bqpl.Excetpions.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
