@@ -1,0 +1,8 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/Bqpl.Exceptions/bin/Debug
+/.vs
+/Bqpl.Exceptions/obj/Debug
+/Bqpl.Exceptions/project.lock.json
