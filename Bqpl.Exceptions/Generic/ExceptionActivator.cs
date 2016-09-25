@@ -11,7 +11,7 @@ namespace Bqpl.Exceptions.Generic
     }
 
     private static T Create<T>(params object[] args)
-              where T : Exception
+      where T : Exception
     {
       return (T)Activator.CreateInstance(typeof(T), args);
     }
